@@ -22,13 +22,13 @@ jobs:
          dotnet-version: '7.0.x'
 
      - name: Restore
-       run: dotnet restore ./GitHubActionSample.sln
+       run: dotnet restore 
 
      - name: Build
-       run: dotnet build ./GitHubActionSample.sln
+       run: dotnet build --configuration Release --no-restore
 
      - name: Test
        run: dotnet test -c Release --no-build
 
      - name: Publish
-       run: dotnet publish ./GitHubActionSample.sln --configuration Release --no-build
+       run: dotnet publish  --configuration Release --no-build
