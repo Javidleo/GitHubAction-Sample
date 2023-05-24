@@ -28,7 +28,7 @@ jobs:
        run: dotnet build ./GitHubActionSample.sln
 
      - name: Test
-       run: dotnet test -c Release --no-build
+       run: dotnet test -c Release
 
      - name: Publish
-       run: dotnet publish ./GitHubActionSample.sln --configuration Release 
+       run: dotnet publish ./GitHubActionSample.sln --configuration Release --no-build
